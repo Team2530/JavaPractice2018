@@ -12,6 +12,8 @@ package org.usfirst.frc.team2530.robot;
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
+	private int joystickPort = 0;
+	
 	//// CREATING BUTTONS
 	// One type of button is a joystick button which is any button on a
 	//// joystick.
@@ -39,4 +41,17 @@ public class OI {
 	// Start the command when the button is released and let it run the command
 	// until it is finished as determined by it's isFinished method.
 	// button.whenReleased(new ExampleCommand());
+	
+	//Creating Joystick buttons
+	Joystick stick = new Joystick(joystickPort);
+	
+	Button button1 = new JoystickButton(stick, 1);
+	
+	//Assigning joystick button commands
+	button1.whenPressed(new SwitchSol());
+	
+	
+	//xbox controller buttons
+	
+	
 }

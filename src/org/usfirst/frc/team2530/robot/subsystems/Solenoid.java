@@ -31,7 +31,7 @@ public class Solenoid extends Subsystem {
     }
     
     public boolean getSol1() {
-    	return Solenoid1.get();
+    	return Solenoid1.get(); //extended this returns true
     }
     
     public boolean getSol2() {
