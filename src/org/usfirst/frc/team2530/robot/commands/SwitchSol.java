@@ -1,9 +1,9 @@
-package org.usfirst.frc.team2530.robot.commands;
+/*package src.org.usfirst.frc.team2530.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
-/**
+*//**
  *
- */
+ *//*
 public class SwitchSol extends Command {
 
     public SwitchSol() {
@@ -20,9 +20,9 @@ public class SwitchSol extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	if(Solenoid.getSol1()) { //if extended this returns true 
-    		Solenoid.retract()
+    		Solenoid.retract();
     	} else {
-    		Solenoid.extend()
+    		Solenoid.extend();
     	}
     }
 
@@ -40,3 +40,4 @@ public class SwitchSol extends Command {
     protected void interrupted() {
     }
 }
+*/

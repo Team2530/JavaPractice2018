@@ -1,11 +1,11 @@
-package org.usfirst.frc.team2530.robot.subsystems;
+/*package src.org.usfirst.frc.team2530.robot.subsystems;
 
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 
-/**
- *
- */
+//**
+
+//*
 public class Solenoid extends Subsystem {
 	private Solenoid Solenoid1;
     private Solenoid Solenoid2;
@@ -39,3 +39,4 @@ public class Solenoid extends Subsystem {
     }
 }
 
+*/

@@ -5,7 +5,7 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package org.usfirst.frc.team2530.robot;
+package src.org.usfirst.frc.team2530.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
@@ -52,7 +52,7 @@ public class OI {
 	Button button1 = new JoystickButton(stick, 1);
 	
 	//Assigning joystick button commands
-	button1.whenPressed(new SwitchSol());
+	//button1.whenPressed(new SwitchSol());
 	
 	
 	//xbox controller buttons

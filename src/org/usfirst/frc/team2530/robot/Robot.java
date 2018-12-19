@@ -5,15 +5,18 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package org.usfirst.frc.team2530.robot;
+package src.org.usfirst.frc.team2530.robot;
 
+
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.VictorSP;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import org.usfirst.frc.team2530.robot.commands.ExampleCommand;
-import org.usfirst.frc.team2530.robot.subsystems.ExampleSubsystem;
+import src.org.usfirst.frc.team2530.robot.commands.ExampleCommand;
+import src.org.usfirst.frc.team2530.robot.subsystems.ExampleSubsystem;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -92,6 +95,13 @@ public class Robot extends TimedRobot {
 		Scheduler.getInstance().run();
 	}
 
+	private VictorSP m_motor1;
+	private VictorSP m_motor2;
+	private VictorSP m_motor3;
+	private VictorSP m_motor4;
+	
+	private Joystick m_joystick;
+	
 	@Override
 	public void teleopInit() {
 		// This makes sure that the autonomous stops running when
@@ -101,6 +111,13 @@ public class Robot extends TimedRobot {
 		if (m_autonomousCommand != null) {
 			m_autonomousCommand.cancel();
 		}
+		
+		m_motor1 = new VictorSP(0);
+		m_motor2 = new VictorSP(1);
+		m_motor3 = new VictorSP(2);
+		m_motor4 = new VictorSP(3);
+
+		m_joystick = new Joystick(0);
 	}
 
 	/**
@@ -109,6 +126,10 @@ public class Robot extends TimedRobot {
 	@Override
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
+		m_motor1.set(m_joystick.getY());
+		m_motor2.set(m_joystick.getY());
+		m_motor3.set(m_joystick.getY());
+		m_motor4.set(m_joystick.getY());
 	}
 
 	/**
